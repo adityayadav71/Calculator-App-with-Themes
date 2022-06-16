@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  min-height: 100%;
+  background-color: hsl(222, 26%, 31%);
+}
+
+/* CONTAINER */
+
+.container {
+  display: grid;
+  position: absolute;
+  grid-template-rows: 1fr 2fr 8fr;
+  gap: 1.5rem;
+  width: 30%;
+  margin: 8rem auto;
+  min-height: 80vh;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.calci-head,
+.calci-screen,
+.calci-numpad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+}
+
+.calc {
+  align-self: end;
+}
+
+.calci-head {
+  font-size: 2.4rem;
+  color: #fff;
+  padding: 0.1rem;
+}
+
+/* THEME SWITCHER */
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme {
+  text-transform: uppercase;
+  font-size: 1rem;
+  grid-row: 2;
+}
+
+.theme-numbers {
+  grid-column: 2;
+  align-self: center;
+  justify-self: center;
+  font-size: 1rem;
+  letter-spacing: 1.2rem;
+  margin-left: 1rem;
+}
+
+.theme-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 2.4rem;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 3rem;
+  grid-row: 2;
+}
+
+.theme-switch-btn {
+  border: none;
+  cursor: pointer;
+  width: 1rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+
+.background-btn-1 {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.background-btn-1,
+.background-btn-2,
+.background-btn-3 {
+  position: absolute;
+  background-color: transparent;
+}
+
+.background-btn-1 {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.background-btn-2 {
+  transform: translateX(1.67rem);
+  background-color: transparent;
+}
+
+.background-btn-3 {
+  transform: translateX(3.34rem);
+  background-color: transparent;
+}
+
+.background-btn-1:hover,
+.background-btn-2:hover,
+.background-btn-3:hover {
+  background-color: hsl(222, 26%, 31%);
+}
+
+.active {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.active:hover {
+  background-color: hsl(6, 63%, 60%);
+}
+
+/* CALCULATOR BODY */
+
+.calci-screen {
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  background-color: hsl(224, 36%, 15%);
+  font-size: 4.8em;
+  overflow: hidden;
+}
+
+.calci-numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2rem;
+  background-color: hsl(223, 31%, 20%);
+  padding: 2rem;
+}
+
+.num,
+.reset-del,
+.equal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3.6rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+}
+
+.num {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: inset 0 -3px 0 hsl(28, 16%, 65%);
+}
+
+.num:hover {
+  background-color: hsl(30, 25%, 99%);
+  cursor: pointer;
+}
+
+.reset-del {
+  font-size: 2.4rem;
+  color: #fff;
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: inset 0 -3px 0 hsl(224, 28%, 35%);
+}
+
+.reset-del:hover {
+  background-color: hsl(225, 21%, 59%);
+  cursor: pointer;
+}
+
+.reset {
+  grid-column: 1 / span 2;
+}
+
+.equal {
+  grid-column: 3 / span 2;
+  color: #fff;
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: inset 0 -3px 0 hsl(6, 70%, 34%);
+}
+
+.equal:hover {
+  background-color: hsl(6, 63%, 60%);
+  cursor: pointer;
+}
+
+/* THEME-2 */
+
+.theme-2 body {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.theme-2 .calci-head {
+  color: hsl(223, 31%, 20%);
+}
+.theme-2 .theme-switcher {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme-2 .background-btn-1:hover,
+.theme-2 .background-btn-2:hover,
+.theme-2 .background-btn-3:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.theme-2 .background-btn-1 {
+  background-color: transparent;
+}
+
+.theme-2 .background-btn-2 {
+  background-color: hsl(6, 63%, 50%);
+}
+
+.theme-2 .background-btn-3 {
+  background-color: transparent;
+}
+
+.theme-2 .active {
+  background-color: hsl(25, 98%, 40%);
+}
+
+.theme-2 .active:hover {
+  background-color: hsl(25, 98%, 50%);
+}
+
+.theme-2 .calci-screen {
+  color: hsl(223, 31%, 20%);
+  background-color: hsl(0, 0%, 93%);
+}
+.theme-2 .calci-numpad {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme-2 .num {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: inset 0 -3px 0 hsl(35, 11%, 61%);
+}
+.theme-2 .num:hover {
+  background-color: hsl(45, 7%, 99%);
+}
+.theme-2 .reset-del {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: inset 0 -3px 0 hsl(185, 58%, 25%);
+}
+.theme-2 .reset-del:hover {
+  background-color: hsl(185, 42%, 47%);
+}
+.theme-2 .equal {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: inset 0 -3px 0 hsl(25, 99%, 27%);
+}
+.theme-2 .equal:hover {
+  background-color: hsl(25, 98%, 50%);
+}
+
+/* THEME-3 */
+
+.theme-3 body {
+  background-color: hsl(268, 75%, 9%);
+}
+
+.theme-3 .calci-head {
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 .theme-switcher {
+  background-color: hsl(268, 71%, 12%);
+}
+
+.theme-3 .background-btn-1:hover,
+.theme-3 .background-btn-2:hover,
+.theme-3 .background-btn-3:hover {
+  background-color: hsl(268, 75%, 9%);
+}
+
+.theme-3 .background-btn-1 {
+  background-color: transparent;
+}
+
+.theme-3 .background-btn-2 {
+  background-color: transparent;
+}
+
+.theme-3 .background-btn-3 {
+  background-color: hsl(176, 100%, 44%);
+}
+
+.theme-3 .active {
+  background-color: hsl(176, 100%, 44%);
+}
+
+.theme-3 .active:hover {
+  background-color: hsl(176, 100%, 54%);
+}
+
+.theme-3 .calci-screen {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 71%, 12%);
+}
+.theme-3 .calci-numpad {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme-3 .num {
+  color: hsl(52, 100%, 62%);
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: inset 0 -3px 0 hsl(290, 70%, 36%);
+}
+.theme-3 .num:hover {
+  background-color: hsl(268, 47%, 31%);
+}
+.theme-3 .reset-del {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: inset 0 -3px 0 hsl(285, 91%, 52%);
+}
+.theme-3 .reset-del:hover {
+  background-color: hsl(281, 89%, 36%);
+}
+.theme-3 .equal {
+  color: hsl(268, 75%, 9%);
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: inset 0 -3px 0 hsl(177, 92%, 70%);
+}
+.theme-3 .equal:hover {
+  background-color: hsl(176, 100%, 54%);
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-1" id="theme-switcher">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calci-head">
+        <p class="calc">calc</p>
+        <div class="right">
+          <div class="theme-numbers">123</div>
+          <p class="theme">theme</p>
+          <div class="theme-switcher">
+            <button
+              class="theme-switch-btn background-btn-1 active"
+              id="theme-switch-btn"
+            ></button>
+            <button
+              class="theme-switch-btn background-btn-2"
+              id="theme-switch-btn"
+            ></button>
+            <button
+              class="theme-switch-btn background-btn-3"
+              id="theme-switch-btn"
+            ></button>
+          </div>
+        </div>
+      </div>
+      <div class="calci-screen" id="screen"></div>
+      <div class="calci-numpad">
+        <button class="num number">7</button>
+        <button class="num number">8</button>
+        <button class="num number">9</button>
+        <button class="reset-del del" id="delete">DEL</button>
+        <button class="num number">4</button>
+        <button class="num number">5</button>
+        <button class="num number">6</button>
+        <button class="num plus" id="plus">+</button>
+        <button class="num number">1</button>
+        <button class="num number">2</button>
+        <button class="num number">3</button>
+        <button class="num minus" id="minus">-</button>
+        <button class="num decimal" id="decimal">.</button>
+        <button class="num number">0</button>
+        <button class="num divide" id="divide">/</button>
+        <button class="num multiply" id="multiply">x</button>
+        <button class="reset-del reset" id="reset">RESET</button>
+        <button class="equal" id="equal">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
