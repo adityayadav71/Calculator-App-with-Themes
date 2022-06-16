@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution on frontend mentor](https://your-solution-url.com)
-- Live Site URL: [Live on Github Pages](https://your-live-site-url.com)
+- Solution URL: [Solution on frontend mentor](https://www.frontendmentor.io/solutions/responsive-calculator-app-oCKvqdITQA)
+- Live Site URL: [Live on Github Pages](https://adityayadav71.github.io/calculator-app-with-themes/)
 
 ## My process
 
