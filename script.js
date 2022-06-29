@@ -1,13 +1,9 @@
-const numbers = document.getElementsByClassName("number");
+const numbers = document.querySelectorAll(".number");
+const operator = document.querySelectorAll(".operator");
 const screen = document.getElementById("screen");
 const deleteBtn = document.getElementById("delete");
 const resetBtn = document.getElementById("reset");
 const equalBtn = document.getElementById("equal");
-const plusBtn = document.getElementById("plus");
-const minusBtn = document.getElementById("minus");
-const divideBtn = document.getElementById("divide");
-const multiplyBtn = document.getElementById("multiply");
-const dotBtn = document.getElementById("decimal");
 const themeSwitchBtns = document.getElementsByClassName("theme-switch-btn");
 const themeSwitchControl = document.getElementById("theme-switcher");
 let expression = "";
@@ -33,47 +29,41 @@ function active(k) {
   }
 }
 
-for (let i = 0; i < numbers.length; i++) {
-  numbers[i].addEventListener("click", function () {
-    screen.textContent += numbers[i].textContent;
+const updateExpression = function (content) {
+  expression = content;
+};
+
+// Event Listeners
+numbers.forEach((num) => {
+  num.addEventListener("click", function () {
+    screen.textContent += num.textContent;
     expression = screen.textContent;
-    console.log(expression);
   });
-}
+});
+
+operator.forEach((op) => {
+  op.addEventListener("click", function () {
+    screen.textContent += `${op.dataset.value}`;
+    updateExpression(screen.textContent);
+  });
+});
 
 deleteBtn.addEventListener("click", function () {
   screen.textContent = screen.textContent.slice(0, -1);
-  expression = screen.textContent;
+  updateExpression(screen.textContent);
 });
+
 resetBtn.addEventListener("click", function () {
   screen.textContent = "";
-  expression = screen.textContent;
+  updateExpression(screen.textContent);
 });
+
 equalBtn.addEventListener("click", function () {
-  let result = eval(expression);
-  screen.textContent = `${result}`;
-});
-dotBtn.addEventListener("click", function () {
-  screen.textContent += ".";
-  expression = screen.textContent;
-});
-plusBtn.addEventListener("click", function () {
-  screen.textContent += "+";
-  expression = screen.textContent;
-  console.log(expression);
-});
-minusBtn.addEventListener("click", function () {
-  screen.textContent += "-";
-  expression = screen.textContent;
-  console.log(expression);
-});
-divideBtn.addEventListener("click", function () {
-  screen.textContent += "/";
-  expression = screen.textContent;
-  console.log(expression);
-});
-multiplyBtn.addEventListener("click", function () {
-  screen.textContent += "*";
-  expression = screen.textContent;
-  console.log(expression);
+  try {
+    screen.textContent = `${eval(expression)}`;
+  } catch (e) {
+    if (e instanceof SyntaxError) {
+      alert("Invalid operation🙁. Check your operators!");
+    }
+  }
 });
