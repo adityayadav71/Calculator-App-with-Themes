@@ -11,6 +11,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 
     <title>Calculator</title>
   </head>
@@ -46,19 +47,18 @@
         <button class="num number">4</button>
         <button class="num number">5</button>
         <button class="num number">6</button>
-        <button class="num plus" id="plus">+</button>
+        <button class="num operator" data-value="+" id="plus">+</button>
         <button class="num number">1</button>
         <button class="num number">2</button>
         <button class="num number">3</button>
-        <button class="num minus" id="minus">-</button>
-        <button class="num decimal" id="decimal">.</button>
+        <button class="num operator" data-value="-" id="minus">-</button>
+        <button class="num operator" data-value="." id="decimal">.</button>
         <button class="num number">0</button>
-        <button class="num divide" id="divide">/</button>
-        <button class="num multiply" id="multiply">x</button>
+        <button class="num operator" data-value="/" id="divide">/</button>
+        <button class="num operator" data-value="*" id="multiply">x</button>
         <button class="reset-del reset" id="reset">RESET</button>
         <button class="equal" id="equal">=</button>
       </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
